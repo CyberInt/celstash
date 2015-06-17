@@ -16,12 +16,12 @@ Please submit bugs [here](https://github.com/CyberInt/celstash/issues).
 # logstash setup
 
     input {
-        udp => {
+        udp {
             codec => json
         }
     }
     output {
-        elasticsearch => {
+        elasticsearch {
             host => localhost  # Change to your host
         }
     }
