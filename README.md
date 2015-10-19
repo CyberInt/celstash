@@ -8,7 +8,8 @@ Please submit bugs [here](https://github.com/CyberInt/celstash/issues).
     import celstash
     import logging
 
-    logger = celstash.new_logger('worker1', logstash_host='example.com')
+    celstash.configure(logstash_host='logstash', logstash_port=9999)
+    logger = celstash.new_logger('worker1')
     logger.setLevel(logging.INFO)
     logger.info('Money is the root of all evil, and man needs roots.')
 
@@ -18,6 +19,7 @@ Please submit bugs [here](https://github.com/CyberInt/celstash/issues).
     input {
         udp {
             codec => json
+            'port' => "9999"
         }
     }
     output {
