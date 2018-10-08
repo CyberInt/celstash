@@ -1,5 +1,5 @@
 # celstash
-Celery logging to logstash and sturctured log (JSON) file
+Celery logging to logstash and structured log (JSON) file
 
 Please submit bugs [here](https://github.com/CyberInt/celstash/issues).
 
